@@ -1,0 +1,24 @@
+{
+  "name": "agent-mirror-daemon",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Local daemon that tails Claude Code sessions and relays them to the cloud.",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "daemon": "tsx src/index.ts",
+    "bootstrap": "tsx src/bootstrap-auth.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.46.1",
+    "chokidar": "^4.0.1",
+    "dotenv": "^16.4.5",
+    "node-pty": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
